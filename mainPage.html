@@ -7,40 +7,47 @@
   <title>Letterboxd Clone</title>
 </head>
 <body>
-  <header>
+  <header id="header">
     <div class="heading-background"></div>
-    <nav>
+    <nav id="nav">
       <img src="./images/letterboxd-logo-h-neg-rgb.svg" alt="" class="header-logo">
-      <ul class="nav-list">
-        <li><button class="nav-button">SIGN IN</button></li>
-        <li><button class="nav-button">CREATE ACCOUNT</button></li>
-        <li><button class="nav-button">FILMS</button></li>
-        <li><button class="nav-button">LISTS</button></li>
-        <li><button class="nav-button">MEMBERS</button></li>
-        <li><button class="nav-button">JOURNAL</button></li>
-      </ul>
-      <div class="search-input-container">
-        <input type="text" class="search-input">
-        <img src="./images/search_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+      <div class="nav-right" id="nav-right">
+        <ul class="nav-list">
+          <li><button class="nav-button" id="sign-in-btn" onclick=signInDropdown()>SIGN IN</button></li>
+          <li><button class="nav-button">CREATE ACCOUNT</button></li>
+          <li><button class="nav-button">FILMS</button></li>
+          <li><button class="nav-button">LISTS</button></li>
+          <li><button class="nav-button">MEMBERS</button></li>
+          <li><button class="nav-button">JOURNAL</button></li>
+        </ul>
+        <div class="search-input-container">
+          <input type="text" class="search-input">
+          <img src="./images/search_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+        </div>
       </div>
-      <div class="sign-in-container">
-        <div class="username-container">
-          <label for="username">Username</label>
-          <input type="text" name='username' id="username">
+    </nav>
+    <div class="sign-in-container" id="sign-in-container">
+      <button class="close-btn">
+        <img src="./images/close_FILL0_wght400_GRAD0_opsz24.png" alt="">
+      </button>
+      <div class="username-container">
+        <label for="username" class="username-text">Username</label>
+        <input type="text" name='username' id="username">
+      </div>
+      <div class="password-container">
+        <div class="password-text">
+          <label for="password">Password</label>
+          <p class="forgot-password">Forgotten?</p>
         </div>
-        <div class="password-container">
-          <div class="password-text">
-            <label for="password">Password</label>
-            <p class="forgot-password">Forgotten?</p>
-          </div>
-          <input type="text" name="
-          password" id="password">
-        </div>
+        <input type="text" name="
+        password" id="password">
+      </div>
+      <div class="sign-in-container-right">
         <input type="checkbox" name="remember-me" id="remember-me">
         <label for="remember-me">Remember Me</label>
         <button class="sign-in-btn">SIGN IN</button>
       </div>
-    </nav>
+    </div>
   </header>
   <main>
     <section class="main-image-header-container">

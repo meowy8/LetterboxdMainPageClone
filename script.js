@@ -1,8 +1,11 @@
 const trendingFilmPoster = document.querySelectorAll('.trending-film');
 const signInBtn = document.getElementById('sign-in-btn');
+const signInContainer = document.getElementById('sign-in-container');
+const navRight = document.getElementById('nav-right');
 
 const signInDropdown = () => {
-  
+  signInContainer.style.display = 'flex';
+  navRight.style.display = 'none'
 }
 
 const fetchFilmPoster = () => {
