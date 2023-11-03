@@ -14,6 +14,7 @@ nav {
   width: 100vw;
   align-items: center;
   position: absolute;
+  /*z-index: 2;*/
   /*pointer-events: none;*/
 }
 
@@ -73,8 +74,8 @@ nav {
   height: 30px;
   border-radius: 50px;
   border: none;
-  background-color: black;
-  opacity: 0.1;
+  background-color: rgb(255, 255, 255);
+  opacity: .2;
   outline: none;
 }
 
@@ -156,8 +157,26 @@ nav {
   font-weight: bold;
 }
 
+/*
+.main-image-header-container {
+  width: 1000px;
+  border: 1px solid black;
+}
+*/
+
+/*
+.header-overlay {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  background-color: transparent;
+  box-shadow: inset 0 0 30px 30px rgb(0, 20, 29);
+  z-index: 1;
+}
+*/
+
 .main-image-header {
-  width: 100vw;
+  width: 100%;
 }
 
 .site-info {
@@ -229,6 +248,29 @@ span {
   height: 225px;
   border: 1px solid gray;
   border-radius: 3px;
+}
+
+.trending-film-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 225px;
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.trending-film-overlay:hover {
+  background-color: rgba(0, 0, 0, .7);
+  opacity: 1;
+}
+
+.trending-film-overlay p {
+  position: absolute;
+  font-size: 30px;
+  color: rgb(255, 255, 239);
 }
 
 .trending-film img {

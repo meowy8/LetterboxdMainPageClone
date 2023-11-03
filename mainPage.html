@@ -10,7 +10,7 @@
   <header id="header">
     <div class="heading-background"></div>
     <nav id="nav">
-      <img src="./images/letterboxd-logo-h-neg-rgb.svg" alt="" class="header-logo">
+      <img src="./images/letterboxd-logo-h-neg-rgb.svg" alt="" class="header-logo" id="header-logo">
       <div class="nav-right" id="nav-right">
         <ul class="nav-list">
           <li><button class="nav-button" id="sign-in-btn" onclick=signInDropdown()>SIGN IN</button></li>
@@ -27,7 +27,7 @@
       </div>
     </nav>
     <div class="sign-in-container" id="sign-in-container">
-      <button class="close-btn">
+      <button class="close-btn" onclick=closeDropdown()>
         <img src="./images/close_FILL0_wght400_GRAD0_opsz24.png" alt="">
       </button>
       <div class="username-container">
@@ -51,7 +51,8 @@
   </header>
   <main>
     <section class="main-image-header-container">
-      <img src="./images/kotfm-1920-1920-1080-1080-crop-000000.jpg" alt="" class="main-image-header">
+      <div class="header-overlay"></div>
+      <img src="" alt="" class="main-image-header" id="main-image-header">
     </section>
     <section class="site-info">
       <div class="heading-info-container">
@@ -72,16 +73,22 @@
     </section>
     <section class="trending-films-container">
       <div class="trending-film" id="trending-film">
+        <div class="trending-film-overlay"></div>
       </div>
       <div class="trending-film">
+        <div class="trending-film-overlay"></div>
       </div>
       <div class="trending-film">
+        <div class="trending-film-overlay"></div>
       </div>
       <div class="trending-film">
+        <div class="trending-film-overlay"></div>
       </div>
       <div class="trending-film">
+        <div class="trending-film-overlay"></div>
       </div>
       <div class="trending-film">
+        <div class="trending-film-overlay"></div>
       </div>
     </section>
   </main>

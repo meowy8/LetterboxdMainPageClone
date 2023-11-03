@@ -2,10 +2,17 @@ const trendingFilmPoster = document.querySelectorAll('.trending-film');
 const signInBtn = document.getElementById('sign-in-btn');
 const signInContainer = document.getElementById('sign-in-container');
 const navRight = document.getElementById('nav-right');
+const mainImageHeader = document.getElementById('main-image-header');
+const trendingFilmPosterOverlay = document.querySelectorAll('.trending-film-overlay');
 
 const signInDropdown = () => {
   signInContainer.style.display = 'flex';
-  navRight.style.display = 'none'
+  nav.style.display = 'none'
+}
+
+const closeDropdown = () => {
+  signInContainer.style.display = 'none';
+  nav.style.display = 'flex';
 }
 
 const fetchFilmPoster = () => {
@@ -21,12 +28,20 @@ const fetchFilmPoster = () => {
     .then(response => response.json())
     .then(response => {
       console.log(response)
+      headerPath = response.results[0].backdrop_path
+      mainImageHeader.src = `https://image.tmdb.org/t/p/original${headerPath}`
       trendingFilmPoster.forEach((div, index) => {
         const posterPath = response.results[index].poster_path;
         const posterImg = document.createElement('img');
         posterImg.src = `https://image.tmdb.org/t/p/original${posterPath}`
         div.appendChild(posterImg);
       });
+      trendingFilmPosterOverlay.forEach((div, index) => {
+        const rating = document.createElement('p');
+        const ratingData = response.results[index].vote_average
+        rating.innerHTML = `${ratingData.toFixed(1)}/10`
+        div.appendChild(rating)
+      })
     })
     .catch(err => console.error(err));
 }
